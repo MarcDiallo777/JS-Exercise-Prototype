@@ -38,17 +38,27 @@ function Airplane(name) {
       - Give instances of Person a method `.toString()`:
           + It should return a string with `name` and `age`. Example: "Mary, 50"
   */
-  
- function Person() {
-    
-  }
- 
- 
+ function Person(name, age){
+  this.name = name;
+  this.age = age;
+  const stomach = [];
+}
 
-  
-  
-  
-  
+Person.prototype.eat = function(array, someFood){
+  array.push(someFood);
+  return array;
+};
+
+Person.prototype.poop = function(array){
+  for (let i = 0; array.length > i; i++){
+    array.pop;
+  }
+};
+
+Person.prototype.greeting = function(){
+  return `${this.name}, ${this.age}`
+}; 
+ 
   /*
     TASK 2
       - Write a Car constructor that initializes `model` and `milesPerGallon` from arguments.
@@ -62,11 +72,17 @@ function Airplane(name) {
       - STRETCH: A car which runs out of `fuel` while driving can't drive any more distance:
           + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
   */
-  
- function Car() {
-    
-  }
-  
+ function Car(model, MPG){
+  this.model = model;
+  this.milesPerGallon = MPG;
+  const tank = 0;
+  const odometer = 0;
+}
+
+Car.prototype.fill = function (gallons){
+  return tank + gallons;
+}
+
   
   /*
     TASK 3
